@@ -1,13 +1,15 @@
 #!/bin/bash
 
 ##########################
-# About: Print the list of users who has read access in the organisation 
+# About: 0Print the list of users who has read access in the organisation repo
 # Github API Integration
-# Input: Export Username, Token and Organisation, Repo name
-# 
+# Export Username, Token
+# Input: Organisation, Repo name
+#
 # Owner: Tejaswini
 ##########################
-helper()
+
+helper
 
 # GitHub API URL
 API_URL="https://api.github.com"
@@ -47,12 +49,15 @@ function list_users_with_read_access {
 
 function helper {
 expected_cmd_args=2
-if [ $# -ne $expected_cmd_args]; 
+if [ $# -ne $expected_cmd_args];
 then
     echo "Please execute the script with required cmd args"
     echo "asd"
+fi
 }
+
 # Main script
 
 echo "Listing users with read access to ${REPO_OWNER}/${REPO_NAME}..."
-list_users_with_read_access
+list_users_with_read_access    
+                             
